@@ -79,7 +79,6 @@
 		411E941019DE185C00B1A948 /* HelloTwitter */ = {
 			isa = PBXGroup;
 			children = (
-				411E941319DE185C00B1A948 /* AppDelegate.swift */,
 				411E941819DE185C00B1A948 /* ViewController.swift */,
 				411E941A19DE185C00B1A948 /* Main.storyboard */,
 				411E941D19DE185C00B1A948 /* Images.xcassets */,
@@ -93,6 +92,7 @@
 		411E941119DE185C00B1A948 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				411E941319DE185C00B1A948 /* AppDelegate.swift */,
 				411E941219DE185C00B1A948 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -409,6 +409,7 @@
 				411E943219DE185C00B1A948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		411E943319DE185C00B1A948 /* Build configuration list for PBXNativeTarget "HelloTwitterTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				411E943519DE185C00B1A948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
