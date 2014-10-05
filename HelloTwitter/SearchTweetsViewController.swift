@@ -26,9 +26,14 @@ class SearchTweetsViewController: UITableViewController, UITextFieldDelegate {
     return 10
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell", forIndexPath: indexPath) as UITableViewCell
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+  {
+    var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
+      forIndexPath: indexPath) as UITableViewCell
+    
     cell.textLabel?.text = "\(indexPath.row) in section \(indexPath.section)"
+    
     return cell
   }
   
@@ -43,7 +48,13 @@ class SearchTweetsViewController: UITableViewController, UITextFieldDelegate {
     TwitterAPIAuthenticator.printBearerToken()
     
     searchField.delegate = self
+    
     navigationItem.rightBarButtonItem = nil
+    navigationItem.backBarButtonItem = UIBarButtonItem(
+      title: "",
+      style: UIBarButtonItemStyle.Plain,
+      target: nil,
+      action: nil)
   }
   
   @IBAction private func didCancelSearch(sender: AnyObject) {

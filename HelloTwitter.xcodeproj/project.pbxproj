@@ -15,6 +15,7 @@
 		411E942119DE185C00B1A948 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 411E941F19DE185C00B1A948 /* LaunchScreen.xib */; };
 		411E942D19DE185C00B1A948 /* HelloTwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E942C19DE185C00B1A948 /* HelloTwitterTests.swift */; };
 		41651E3619E122A500B94896 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41651E3519E122A500B94896 /* TweetTableViewCell.swift */; };
+		41651E3819E1269800B94896 /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41651E3719E1269800B94896 /* TweetDetailsViewController.swift */; };
 		41F164C919E0D6B100FA41FF /* TwitterAPIAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		411E942B19DE185C00B1A948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411E942C19DE185C00B1A948 /* HelloTwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTwitterTests.swift; sourceTree = "<group>"; };
 		41651E3519E122A500B94896 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		41651E3719E1269800B94896 /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
 		41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIAuthenticator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,12 +87,13 @@
 			children = (
 				411E941819DE185C00B1A948 /* SearchTweetsViewController.swift */,
 				411E941A19DE185C00B1A948 /* Main.storyboard */,
+				41651E3719E1269800B94896 /* TweetDetailsViewController.swift */,
 				41651E3519E122A500B94896 /* TweetTableViewCell.swift */,
+				41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */,
 				411E941D19DE185C00B1A948 /* Images.xcassets */,
 				411E941F19DE185C00B1A948 /* LaunchScreen.xib */,
 				411E941519DE185C00B1A948 /* HelloTwitter.xcdatamodeld */,
 				411E941119DE185C00B1A948 /* Supporting Files */,
-				41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */,
 			);
 			path = HelloTwitter;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				411E941919DE185C00B1A948 /* SearchTweetsViewController.swift in Sources */,
 				411E941719DE185C00B1A948 /* HelloTwitter.xcdatamodeld in Sources */,
 				41651E3619E122A500B94896 /* TweetTableViewCell.swift in Sources */,
+				41651E3819E1269800B94896 /* TweetDetailsViewController.swift in Sources */,
 				411E941419DE185C00B1A948 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
