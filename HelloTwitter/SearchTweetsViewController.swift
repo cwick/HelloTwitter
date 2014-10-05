@@ -1,7 +1,4 @@
 //
-//  ViewController.swift
-//  HelloTwitter
-//
 //  Created by Carmen Wick on 10/2/14.
 //  Copyright (c) 2014 Carmen Wick. All rights reserved.
 //
@@ -18,8 +15,6 @@ class SearchTweetsViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    TwitterAPIAuthenticator.printBearerToken()
-    
     searchField.delegate = self
     
     navigationItem.rightBarButtonItem = nil
@@ -28,6 +23,10 @@ class SearchTweetsViewController: UITableViewController {
       style: UIBarButtonItemStyle.Plain,
       target: nil,
       action: nil)
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    TwitterAPI.fetchSearchResults() 
   }
   
   @IBAction private func didCancelSearch(sender: AnyObject) {

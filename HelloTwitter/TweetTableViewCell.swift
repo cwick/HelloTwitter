@@ -1,7 +1,4 @@
 //
-//  TweetTableViewCell.swift
-//  HelloTwitter
-//
 //  Created by Carmen Wick on 10/4/14.
 //  Copyright (c) 2014 Carmen Wick. All rights reserved.
 //
