@@ -24,7 +24,11 @@ class TwitterAPIAuthenticator {
     ]
     
     var task = session.dataTaskWithRequest(request) { (data, response, error) in
-      println(NSString(data: data, encoding: NSASCIIStringEncoding))
+      var result = NSJSONSerialization.JSONObjectWithData(data,
+        options: NSJSONReadingOptions.allZeros,
+        error: nil) as NSDictionary
+      
+      println(result)
     }
     
     task.resume()
