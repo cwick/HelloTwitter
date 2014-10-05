@@ -8,39 +8,12 @@
 
 import UIKit
 
-class SearchTweetsViewController: UITableViewController, UITextFieldDelegate {
+class SearchTweetsViewController: UITableViewController {
   @IBOutlet private weak var searchField: UITextField!
   @IBOutlet private var cancelButton: UIBarButtonItem!
   @IBOutlet weak var searchResults: UITableView!
   
   private var previousSearch = ""
-  
-  // UITextFieldDelegate
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
-    return false
-  }
-  
-  // UITableViewDataSource
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
-  }
-  
-  override func tableView(tableView: UITableView,
-    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-  {
-    var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
-      forIndexPath: indexPath) as UITableViewCell
-    
-    cell.textLabel?.text = "\(indexPath.row) in section \(indexPath.section)"
-    
-    return cell
-  }
-  
-  // UITableViewDelegate
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
-  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -74,6 +47,39 @@ class SearchTweetsViewController: UITableViewController, UITextFieldDelegate {
     
     navigationItem.setRightBarButtonItem(cancelButton, animated: true)
     previousSearch = searchField.text
+  }
+}
+
+// MARK: UITextFieldDelegate
+extension SearchTweetsViewController : UITextFieldDelegate {
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return false
+  }
+}
+
+// MARK: UITableViewDataSource
+extension SearchTweetsViewController : UITableViewDataSource {
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+  {
+    var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
+      forIndexPath: indexPath) as UITableViewCell
+    
+    cell.textLabel?.text = "\(indexPath.row) in section \(indexPath.section)"
+    
+    return cell
+  }
+}
+
+// MARK: UITableViewDelegate
+extension SearchTweetsViewController : UITableViewDelegate {
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
   }
 }
 
