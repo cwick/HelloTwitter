@@ -69,8 +69,9 @@ class SearchTweetsViewController: UITableViewController, UITextFieldDelegate {
   @IBAction private func searchFieldEditingDidBegin(sender: AnyObject) {
     // Needed for selectAll to work
     dispatch_after(1, dispatch_get_main_queue(), {
-      self.searchField.selectAll(self)
+      self.searchField.selectAll(nil) // pass nil to prevent copy/paste menu from coming up
     })
+    
     navigationItem.setRightBarButtonItem(cancelButton, animated: true)
     previousSearch = searchField.text
   }
