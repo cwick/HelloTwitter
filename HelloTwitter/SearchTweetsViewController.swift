@@ -26,7 +26,11 @@ class SearchTweetsViewController: UITableViewController {
   }
   
   override func viewWillAppear(animated: Bool) {
-    TwitterAPI.fetchSearchResults() 
+    var api = TwitterAPI(
+      key: "yr40AyjoUvDBlE2apn4dfsBqz",
+      secret: "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z")
+    
+    api.fetchSearchResults("technology")
   }
   
   @IBAction private func didCancelSearch(sender: AnyObject) {
