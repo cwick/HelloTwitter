@@ -8,14 +8,33 @@
 
 import UIKit
 
-class SearchTweetsViewController: UIViewController, UITextFieldDelegate {
+class SearchTweetsViewController: UITableViewController, UITextFieldDelegate {
   @IBOutlet private weak var searchField: UITextField!
   @IBOutlet private var cancelButton: UIBarButtonItem!
+  @IBOutlet weak var searchResults: UITableView!
+  
   private var previousSearch = ""
   
+  // UITextFieldDelegate
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return false
+  }
+  
+  // UITableViewDataSource
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell", forIndexPath: indexPath) as UITableViewCell
+    cell.textLabel?.text = "\(indexPath.row) in section \(indexPath.section)"
+    return cell
+  }
+  
+  // UITableViewDelegate
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
   }
   
   override func viewDidLoad() {
@@ -44,6 +63,5 @@ class SearchTweetsViewController: UIViewController, UITextFieldDelegate {
     navigationItem.setRightBarButtonItem(cancelButton, animated: true)
     previousSearch = searchField.text
   }
-  
 }
 
