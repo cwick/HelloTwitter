@@ -18,9 +18,6 @@ class SearchTweetsViewController: UITableViewController {
     searchField.delegate = self
     initializeSearchResultsView()
     
-    tableView.rowHeight = UITableViewAutomaticDimension;
-    tableView.estimatedRowHeight = 40
-    
     navigationItem.rightBarButtonItem = nil
     navigationItem.backBarButtonItem = UIBarButtonItem(
       title: "",

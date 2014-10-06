@@ -9,13 +9,13 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <tableViewController id="vXZ-lx-hvc" userLabel="Search Tweets" customClass="SearchTweetsViewController" customModule="HelloTwitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="203" sectionHeaderHeight="22" sectionFooterHeight="22" id="MI6-ui-nXg" userLabel="Search Results">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="142" sectionHeaderHeight="22" sectionFooterHeight="22" id="MI6-ui-nXg" userLabel="Search Results">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet Cell" id="kfy-Sk-vTe" customClass="TweetTableViewCell" customModule="HelloTwitter" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet Cell" rowHeight="142" id="kfy-Sk-vTe" customClass="TweetTableViewCell" customModule="HelloTwitter" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfy-Sk-vTe" id="7Oi-cu-GAy">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -28,16 +28,16 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkI-kU-Tmv" userLabel="User Name">
-                                            <rect key="frame" x="64" y="8" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="64" y="8" width="41" height="20"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-8p-xei" userLabel="Tweet Text">
-                                            <rect key="frame" x="64" y="29" width="528" height="165"/>
+                                            <rect key="frame" x="60" y="28" width="532" height="105"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
@@ -45,7 +45,7 @@
                                         <constraint firstItem="QkI-kU-Tmv" firstAttribute="top" secondItem="Q6H-3a-b30" secondAttribute="top" id="0PV-9h-Pex"/>
                                         <constraint firstItem="Q6H-3a-b30" firstAttribute="top" secondItem="7Oi-cu-GAy" secondAttribute="topMargin" id="2mq-ta-zpW"/>
                                         <constraint firstItem="QkI-kU-Tmv" firstAttribute="leading" secondItem="Q6H-3a-b30" secondAttribute="trailing" constant="8" id="JTI-Nw-wz0"/>
-                                        <constraint firstItem="Bcr-8p-xei" firstAttribute="leading" secondItem="QkI-kU-Tmv" secondAttribute="leading" id="WdA-tT-hXu"/>
+                                        <constraint firstItem="Bcr-8p-xei" firstAttribute="leading" secondItem="QkI-kU-Tmv" secondAttribute="leading" constant="-4" id="WdA-tT-hXu"/>
                                         <constraint firstItem="Bcr-8p-xei" firstAttribute="top" secondItem="QkI-kU-Tmv" secondAttribute="bottom" id="ZCz-6k-AYS"/>
                                         <constraint firstItem="Q6H-3a-b30" firstAttribute="leading" secondItem="7Oi-cu-GAy" secondAttribute="leadingMargin" id="hN7-S1-83o"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Bcr-8p-xei" secondAttribute="bottom" id="jy7-6G-9Xv"/>
