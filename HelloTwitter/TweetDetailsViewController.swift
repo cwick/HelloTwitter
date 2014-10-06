@@ -6,6 +6,9 @@
 import UIKit
 
 class TweetDetailsViewController: UIViewController {
+  @IBOutlet weak private var tweetLabel: UILabel!
+  var tweetText = ""
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -14,5 +17,7 @@ class TweetDetailsViewController: UIViewController {
       style: UIBarButtonItemStyle.Plain,
       target: nil,
       action: nil)
+    
+    tweetLabel.text = tweetText
   }
 }

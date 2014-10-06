@@ -18,7 +18,7 @@ class TwitterAPI {
     fetchBearerToken() { token in
       var url = self.createURL(fromPath: "/1.1/search/tweets.json")
       var urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
-      urlComponents.queryItems = [NSURLQueryItem(name: "q", value: query)]
+      urlComponents.queryItems = [NSURLQueryItem(name: "q", value: query + " -filter:retweets")]
       
       var request = NSMutableURLRequest(URL: urlComponents.URL!)
       var session = self.createURLSession(fromBearerToken: token)

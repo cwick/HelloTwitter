@@ -8,7 +8,6 @@ import UIKit
 class SearchTweetsViewController: UITableViewController {
   @IBOutlet private weak var searchField: UITextField!
   @IBOutlet private var cancelButton: UIBarButtonItem!
-  @IBOutlet weak var searchResults: UITableView!
   
   private var previousSearch = ""
   private var dataSource = TweetsDataSource()
@@ -27,15 +26,10 @@ class SearchTweetsViewController: UITableViewController {
       action: nil)
   }
   
-  override func viewWillAppear(animated: Bool) {
-    var api = TwitterAPI(
-      key: "yr40AyjoUvDBlE2apn4dfsBqz",
-      secret: "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z")
-    
-    api.fetchSearchResults("technology") { results in
-      self.dataSource.tweets = results["statuses"] as NSArray
-      self.tableView.reloadData()
-    }
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    var destination = segue.destinationViewController as TweetDetailsViewController
+    var tweetText = dataSource.tweets[tableView.indexPathForSelectedRow()!.row]["text"] as String
+    destination.tweetText = tweetText
   }
   
   @IBAction private func didCancelSearch(sender: AnyObject) {
@@ -58,9 +52,22 @@ class SearchTweetsViewController: UITableViewController {
   }
   
   private func initializeSearchResultsView() {
-    searchResults.dataSource = self.dataSource
-    searchResults.tableFooterView = UIView(frame: CGRectZero)
+    tableView.dataSource = self.dataSource
+    tableView.tableFooterView = UIView(frame: CGRectZero)
+    performTwitterSearch("technology")
   }
+  
+  private func performTwitterSearch(query: String) {
+    var api = TwitterAPI(
+      key: "yr40AyjoUvDBlE2apn4dfsBqz",
+      secret: "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z")
+    
+    api.fetchSearchResults(query) { results in
+      self.dataSource.tweets = results["statuses"] as NSArray
+      self.tableView.reloadData()
+    }
+  }
+  
 }
 
 // MARK: UITextFieldDelegate

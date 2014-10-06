@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5j0-yN-Gab">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Search Tweets-->
@@ -57,7 +58,6 @@
                     <connections>
                         <outlet property="cancelButton" destination="3kE-69-cpt" id="hMk-i7-Nos"/>
                         <outlet property="searchField" destination="sho-73-3Ve" id="1BI-AE-W6x"/>
-                        <outlet property="searchResults" destination="MI6-ui-nXg" id="lmR-tu-LoD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="-7" y="114"/>
         </scene>
-        <!--Tweet-->
+        <!--Tweet Details-->
         <scene sceneID="XCh-fU-8in">
             <objects>
-                <viewController id="gHw-O0-GJ0" customClass="TweetDetailsViewController" customModule="HelloTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gHw-O0-GJ0" userLabel="Tweet Details" customClass="TweetDetailsViewController" customModule="HelloTwitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5b4-IR-Bkw"/>
                         <viewControllerLayoutGuide type="bottom" id="2jg-WR-gfp"/>
@@ -93,7 +93,26 @@
                     <view key="view" contentMode="scaleToFill" id="bf3-xD-4Gd">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgQ-m2-vH3">
+                                <rect key="frame" x="16" y="282" width="568" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UgQ-m2-vH3" firstAttribute="leading" secondItem="bf3-xD-4Gd" secondAttribute="leadingMargin" id="0F8-UN-06g"/>
+                            <constraint firstAttribute="centerX" secondItem="UgQ-m2-vH3" secondAttribute="centerX" id="kGs-Ls-pDa"/>
+                            <constraint firstAttribute="centerY" secondItem="UgQ-m2-vH3" secondAttribute="centerY" id="mno-ce-Xzg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UgQ-m2-vH3" secondAttribute="trailing" id="tpe-lx-BQ4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kGs-Ls-pDa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Tweet" id="IyS-hi-Lkm">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="J3F-aI-kef">
@@ -102,6 +121,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetLabel" destination="UgQ-m2-vH3" id="v9x-Um-RvF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-Lc-llo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
