@@ -18,6 +18,6 @@ class TweetTableViewCell: UITableViewCell {
     profileImage.layer.cornerRadius = 4
     profileImage.layer.masksToBounds = true
     tweetTextView.textContainerInset = UIEdgeInsetsZero
-    fullNameLabel.adjustsFontSizeToFitWidth = false
+    tweetTextView.contentInset = UIEdgeInsetsZero
   }
 }
