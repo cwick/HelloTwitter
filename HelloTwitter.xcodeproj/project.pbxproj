@@ -17,7 +17,7 @@
 		41651E3619E122A500B94896 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41651E3519E122A500B94896 /* TweetTableViewCell.swift */; };
 		41651E3819E1269800B94896 /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41651E3719E1269800B94896 /* TweetDetailsViewController.swift */; };
 		41651E3A19E2113600B94896 /* TweetsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41651E3919E2113600B94896 /* TweetsDataSource.swift */; };
-		41F164C919E0D6B100FA41FF /* TwitterAPIAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */; };
+		41F164C919E0D6B100FA41FF /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F164C819E0D6B100FA41FF /* TwitterAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		41651E3519E122A500B94896 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		41651E3719E1269800B94896 /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
 		41651E3919E2113600B94896 /* TweetsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsDataSource.swift; sourceTree = "<group>"; };
-		41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIAuthenticator.swift; sourceTree = "<group>"; };
+		41F164C819E0D6B100FA41FF /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				41651E3719E1269800B94896 /* TweetDetailsViewController.swift */,
 				41651E3919E2113600B94896 /* TweetsDataSource.swift */,
 				41651E3519E122A500B94896 /* TweetTableViewCell.swift */,
-				41F164C819E0D6B100FA41FF /* TwitterAPIAuthenticator.swift */,
+				41F164C819E0D6B100FA41FF /* TwitterAPI.swift */,
 				411E941D19DE185C00B1A948 /* Images.xcassets */,
 				411E941F19DE185C00B1A948 /* LaunchScreen.xib */,
 				411E941519DE185C00B1A948 /* HelloTwitter.xcdatamodeld */,
@@ -227,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41F164C919E0D6B100FA41FF /* TwitterAPIAuthenticator.swift in Sources */,
+				41F164C919E0D6B100FA41FF /* TwitterAPI.swift in Sources */,
 				411E941919DE185C00B1A948 /* SearchTweetsViewController.swift in Sources */,
 				411E941719DE185C00B1A948 /* HelloTwitter.xcdatamodeld in Sources */,
 				41651E3619E122A500B94896 /* TweetTableViewCell.swift in Sources */,
