@@ -19,7 +19,7 @@ class SearchTweetsViewController: UITableViewController {
     initializeSearchResultsView()
     
     tableView.rowHeight = UITableViewAutomaticDimension;
-    tableView.estimatedRowHeight = 60
+    tableView.estimatedRowHeight = 40
     
     navigationItem.rightBarButtonItem = nil
     navigationItem.backBarButtonItem = UIBarButtonItem(

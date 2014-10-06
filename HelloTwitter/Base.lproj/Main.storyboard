@@ -23,62 +23,39 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-3a-b30" userLabel="Profile Image">
                                             <rect key="frame" x="8" y="8" width="48" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="TbB-dR-CQl"/>
-                                                <constraint firstAttribute="width" constant="48" id="cWz-Ib-VRl"/>
+                                                <constraint firstAttribute="width" constant="48" id="thQ-zl-cea"/>
+                                                <constraint firstAttribute="height" constant="48" id="viN-UV-keX"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sb-pg-UUP">
-                                            <rect key="frame" x="64" y="8" width="41" height="17"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkI-kU-Tmv" userLabel="User Name">
+                                            <rect key="frame" x="64" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmF-3o-eux" userLabel="Tweet Text">
-                                            <rect key="frame" x="60" y="25" width="532" height="169"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-8p-xei" userLabel="Tweet Text">
+                                            <rect key="frame" x="64" y="29" width="528" height="165"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="128" id="8dM-qC-ZFY"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Ee5-k5-MXM"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Ldd-vM-8YC"/>
-                                            </constraints>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="8dM-qC-ZFY"/>
-                                                    <exclude reference="Ee5-k5-MXM"/>
-                                                    <exclude reference="Ldd-vM-8YC"/>
-                                                </mask>
-                                            </variation>
                                         </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="hmF-3o-eux" secondAttribute="trailing" id="23V-8g-k4g"/>
-                                        <constraint firstItem="hmF-3o-eux" firstAttribute="top" secondItem="7sb-pg-UUP" secondAttribute="bottom" id="3OB-EW-Nfa"/>
-                                        <constraint firstItem="7sb-pg-UUP" firstAttribute="leading" secondItem="hmF-3o-eux" secondAttribute="leading" constant="4" id="MK6-co-hFB"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Q6H-3a-b30" secondAttribute="trailing" id="PtF-jB-hwQ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="hmF-3o-eux" secondAttribute="bottom" id="RGd-95-bZ6"/>
-                                        <constraint firstItem="hmF-3o-eux" firstAttribute="top" secondItem="7Oi-cu-GAy" secondAttribute="topMargin" constant="14" id="T3K-np-bCG"/>
-                                        <constraint firstItem="hmF-3o-eux" firstAttribute="leading" secondItem="Q6H-3a-b30" secondAttribute="trailing" constant="17" id="Ts6-kY-yTM"/>
-                                        <constraint firstItem="7sb-pg-UUP" firstAttribute="leading" secondItem="Q6H-3a-b30" secondAttribute="trailing" constant="8" id="VEA-3L-ub2"/>
-                                        <constraint firstItem="7sb-pg-UUP" firstAttribute="top" secondItem="Q6H-3a-b30" secondAttribute="top" id="cZv-8g-c0l"/>
-                                        <constraint firstItem="Q6H-3a-b30" firstAttribute="top" secondItem="7Oi-cu-GAy" secondAttribute="topMargin" id="kn4-03-Hg9"/>
-                                        <constraint firstItem="Q6H-3a-b30" firstAttribute="leading" secondItem="7Oi-cu-GAy" secondAttribute="leadingMargin" id="vBi-2r-du3"/>
+                                        <constraint firstItem="QkI-kU-Tmv" firstAttribute="top" secondItem="Q6H-3a-b30" secondAttribute="top" id="0PV-9h-Pex"/>
+                                        <constraint firstItem="Q6H-3a-b30" firstAttribute="top" secondItem="7Oi-cu-GAy" secondAttribute="topMargin" id="2mq-ta-zpW"/>
+                                        <constraint firstItem="QkI-kU-Tmv" firstAttribute="leading" secondItem="Q6H-3a-b30" secondAttribute="trailing" constant="8" id="JTI-Nw-wz0"/>
+                                        <constraint firstItem="Bcr-8p-xei" firstAttribute="leading" secondItem="QkI-kU-Tmv" secondAttribute="leading" id="WdA-tT-hXu"/>
+                                        <constraint firstItem="Bcr-8p-xei" firstAttribute="top" secondItem="QkI-kU-Tmv" secondAttribute="bottom" id="ZCz-6k-AYS"/>
+                                        <constraint firstItem="Q6H-3a-b30" firstAttribute="leading" secondItem="7Oi-cu-GAy" secondAttribute="leadingMargin" id="hN7-S1-83o"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Bcr-8p-xei" secondAttribute="bottom" id="jy7-6G-9Xv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Bcr-8p-xei" secondAttribute="trailing" id="sL5-B7-2aa"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="PtF-jB-hwQ"/>
-                                            <exclude reference="T3K-np-bCG"/>
-                                            <exclude reference="Ts6-kY-yTM"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="profileImage" destination="Q6H-3a-b30" id="MJU-iz-iGk"/>
-                                    <outlet property="tweetTextView" destination="hmF-3o-eux" id="t1f-dU-9jB"/>
-                                    <outlet property="userNameLabel" destination="7sb-pg-UUP" id="VLk-80-zsv"/>
+                                    <outlet property="tweetTextView" destination="Bcr-8p-xei" id="tpD-sH-uZD"/>
+                                    <outlet property="userNameLabel" destination="QkI-kU-Tmv" id="sYY-k0-Lr8"/>
                                     <segue destination="gHw-O0-GJ0" kind="show" id="yCd-Bz-FfF"/>
                                 </connections>
                             </tableViewCell>
