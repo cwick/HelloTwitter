@@ -28,7 +28,7 @@ class SearchTweetsViewController: UITableViewController {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     var destination = segue.destinationViewController as TweetDetailsViewController
-    var tweetText = dataSource.tweets[tableView.indexPathForSelectedRow()!.row]["text"] as String
+    var tweetText = dataSource.tweets[tableView.indexPathForSelectedRow()!.row].text
     destination.tweetText = tweetText
   }
   
@@ -62,7 +62,7 @@ class SearchTweetsViewController: UITableViewController {
       secret: "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z")
     
     api.fetchSearchResults(query) { results in
-      self.dataSource.tweets = results["statuses"] as NSArray
+      self.dataSource.tweets = TweetCollection(fromDictionaryArray: results["statuses"] as NSArray)
       self.tableView.reloadData()
     }
   }

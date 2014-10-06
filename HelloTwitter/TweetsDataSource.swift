@@ -6,7 +6,7 @@
 import UIKit
 
 class TweetsDataSource : NSObject, UITableViewDataSource {
-  var tweets: NSArray = []
+  var tweets: TweetCollection = []
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return tweets.count
@@ -18,17 +18,10 @@ class TweetsDataSource : NSObject, UITableViewDataSource {
     var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
       forIndexPath: indexPath) as TweetTableViewCell
     
-    var tweet = (tweets[indexPath.row] as NSDictionary)
-    var text = tweet["text"] as String
-    var profileImageURL = (tweet["user"] as NSDictionary)["profile_image_url_https"] as String
+    var tweet = tweets[indexPath.row]
     
-    profileImageURL = profileImageURL.stringByReplacingOccurrencesOfString("_normal.jpeg",
-      withString: "_bigger.jpeg",
-      options: NSStringCompareOptions.LiteralSearch,
-      range: nil)
-    
-    cell.tweetTextView.text = text
-    cell.profileImage.sd_setImageWithURL(NSURL(string: profileImageURL))
+    cell.tweetTextView.text = tweet.text
+    cell.profileImage.sd_setImageWithURL(tweet.profileImageURL)
     
     return cell
   }
