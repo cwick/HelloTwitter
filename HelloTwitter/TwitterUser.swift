@@ -15,6 +15,12 @@ class TwitterUser {
     data = fromDictionary
   }
   
+  var name: String {
+    get {
+      return data["name"] as String
+    }
+  }
+  
   var profileImageURL: NSURL {
     get {
       var url = data["profile_image_url"] as String
