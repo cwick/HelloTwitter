@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					411E940D19DE185C00B1A948 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 9M7S6SMHYW;
 					};
 					411E942519DE185C00B1A948 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -422,9 +423,12 @@
 			baseConfigurationReference = 3CA32DFD987CAF5360A5B2BC /* Pods-HelloTwitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HelloTwitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = HelloTwitter/BridgingHeader.h;
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = HelloTwitter/BridgingHeader.h;
 			};
@@ -435,9 +439,12 @@
 			baseConfigurationReference = 22D2D5BF5684CC601F685954 /* Pods-HelloTwitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HelloTwitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = HelloTwitter/BridgingHeader.h;
 			};
 			name = Release;

@@ -16,16 +16,22 @@ class TweetsDataSource : NSObject, UITableViewDataSource {
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
   {
     var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
-      forIndexPath: indexPath) as UITableViewCell
+      forIndexPath: indexPath) as TweetTableViewCell
     
     var tweet = (tweets[indexPath.row] as NSDictionary)
     var text = tweet["text"] as String
     var profileImageURL = (tweet["user"] as NSDictionary)["profile_image_url_https"] as String
     
-    cell.textLabel!.text = text
+    profileImageURL = profileImageURL.stringByReplacingOccurrencesOfString("_normal.jpeg",
+      withString: "_bigger.jpeg",
+//      withString: ".jpeg",
+      options: NSStringCompareOptions.LiteralSearch,
+      range: nil)
     
-    cell.imageView!.sd_setImageWithURL(NSURL(string: profileImageURL), completed: { (image, error, cacheType, url) -> Void in
-      cell.layoutSubviews()
+//    cell.textLabel!.text = text
+//    
+    cell.profileImage.sd_setImageWithURL(NSURL(string: profileImageURL), completed: { (image, error, cacheType, url) -> Void in
+//      cell.layoutSubviews()
     })
     
     return cell

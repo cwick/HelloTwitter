@@ -9,26 +9,38 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <tableViewController id="vXZ-lx-hvc" userLabel="Search Tweets" customClass="SearchTweetsViewController" customModule="HelloTwitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MI6-ui-nXg" userLabel="Search Results">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="245" sectionHeaderHeight="22" sectionFooterHeight="22" id="MI6-ui-nXg" userLabel="Search Results">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet Cell" textLabel="ZCZ-0R-25a" style="IBUITableViewCellStyleDefault" id="kfy-Sk-vTe" customClass="TweetTableViewCell" customModule="HelloTwitter" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet Cell" rowHeight="245" id="kfy-Sk-vTe" customClass="TweetTableViewCell" customModule="HelloTwitter" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfy-Sk-vTe" id="7Oi-cu-GAy">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZCZ-0R-25a">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-3a-b30">
+                                            <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="TbB-dR-CQl"/>
+                                                <constraint firstAttribute="width" constant="48" id="cWz-Ib-VRl"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Q6H-3a-b30" secondAttribute="trailing" id="PtF-jB-hwQ"/>
+                                        <constraint firstItem="Q6H-3a-b30" firstAttribute="top" secondItem="7Oi-cu-GAy" secondAttribute="topMargin" id="kn4-03-Hg9"/>
+                                        <constraint firstItem="Q6H-3a-b30" firstAttribute="leading" secondItem="7Oi-cu-GAy" secondAttribute="leadingMargin" id="vBi-2r-du3"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="PtF-jB-hwQ"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="profileImage" destination="Q6H-3a-b30" id="MJU-iz-iGk"/>
                                     <segue destination="gHw-O0-GJ0" kind="show" id="yCd-Bz-FfF"/>
                                 </connections>
                             </tableViewCell>
@@ -62,7 +74,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="114"/>
+            <point key="canvasLocation" x="804" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVb-1h-iwJ">

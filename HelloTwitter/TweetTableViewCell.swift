@@ -6,10 +6,14 @@
 import UIKit
 
 class TweetTableViewCell: UITableViewCell {
+  @IBOutlet weak var profileImage: UIImageView!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
     layoutMargins = UIEdgeInsetsZero
     preservesSuperviewLayoutMargins = false
+    profileImage.layer.cornerRadius = 4
+    profileImage.layer.masksToBounds = true
   }
 }
