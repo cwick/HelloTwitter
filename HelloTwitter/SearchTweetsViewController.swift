@@ -17,7 +17,7 @@ class SearchTweetsViewController: UITableViewController {
     super.viewDidLoad()
     
     searchField.delegate = self
-    searchResults.dataSource = self.dataSource
+    initializeSearchResultsView()
     
     navigationItem.rightBarButtonItem = nil
     navigationItem.backBarButtonItem = UIBarButtonItem(
@@ -55,6 +55,11 @@ class SearchTweetsViewController: UITableViewController {
     
     navigationItem.setRightBarButtonItem(cancelButton, animated: true)
     previousSearch = searchField.text
+  }
+  
+  private func initializeSearchResultsView() {
+    searchResults.dataSource = self.dataSource
+    searchResults.tableFooterView = UIView(frame: CGRectZero)
   }
 }
 
