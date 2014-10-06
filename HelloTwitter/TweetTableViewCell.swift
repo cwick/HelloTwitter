@@ -8,6 +8,7 @@ import UIKit
 class TweetTableViewCell: UITableViewCell {
   @IBOutlet weak var profileImage: UIImageView!
   @IBOutlet weak var tweetTextView: UITextView!
+  @IBOutlet weak var fullNameLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -16,5 +17,7 @@ class TweetTableViewCell: UITableViewCell {
     preservesSuperviewLayoutMargins = false
     profileImage.layer.cornerRadius = 4
     profileImage.layer.masksToBounds = true
+    tweetTextView.textContainerInset = UIEdgeInsetsZero
+    fullNameLabel.adjustsFontSizeToFitWidth = false
   }
 }
