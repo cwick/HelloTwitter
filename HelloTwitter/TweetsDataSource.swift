@@ -24,15 +24,11 @@ class TweetsDataSource : NSObject, UITableViewDataSource {
     
     profileImageURL = profileImageURL.stringByReplacingOccurrencesOfString("_normal.jpeg",
       withString: "_bigger.jpeg",
-//      withString: ".jpeg",
       options: NSStringCompareOptions.LiteralSearch,
       range: nil)
     
-//    cell.textLabel!.text = text
-//    
-    cell.profileImage.sd_setImageWithURL(NSURL(string: profileImageURL), completed: { (image, error, cacheType, url) -> Void in
-//      cell.layoutSubviews()
-    })
+    cell.tweetTextView.text = text
+    cell.profileImage.sd_setImageWithURL(NSURL(string: profileImageURL))
     
     return cell
   }

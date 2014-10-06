@@ -20,17 +20,30 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfy-Sk-vTe" id="7Oi-cu-GAy">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-3a-b30">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-3a-b30" userLabel="Profile Image">
                                             <rect key="frame" x="8" y="8" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="TbB-dR-CQl"/>
                                                 <constraint firstAttribute="width" constant="48" id="cWz-Ib-VRl"/>
                                             </constraints>
                                         </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZG-kv-6rW">
+                                            <rect key="frame" x="64" y="-2" width="528" height="87"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="87" id="qQu-aK-JPg"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="BZG-kv-6rW" firstAttribute="leading" secondItem="Q6H-3a-b30" secondAttribute="trailing" constant="8" id="8cA-Rm-7WB"/>
+                                        <constraint firstItem="BZG-kv-6rW" firstAttribute="trailing" secondItem="7Oi-cu-GAy" secondAttribute="trailingMargin" id="E5D-5v-3Ga"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Q6H-3a-b30" secondAttribute="trailing" id="PtF-jB-hwQ"/>
                                         <constraint firstItem="Q6H-3a-b30" firstAttribute="top" secondItem="7Oi-cu-GAy" secondAttribute="topMargin" id="kn4-03-Hg9"/>
+                                        <constraint firstItem="BZG-kv-6rW" firstAttribute="top" secondItem="Q6H-3a-b30" secondAttribute="top" constant="-10" id="nCf-Lb-r2w"/>
                                         <constraint firstItem="Q6H-3a-b30" firstAttribute="leading" secondItem="7Oi-cu-GAy" secondAttribute="leadingMargin" id="vBi-2r-du3"/>
                                     </constraints>
                                     <variation key="default">
@@ -41,6 +54,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="profileImage" destination="Q6H-3a-b30" id="MJU-iz-iGk"/>
+                                    <outlet property="tweetTextView" destination="BZG-kv-6rW" id="mBo-9p-97L"/>
                                     <segue destination="gHw-O0-GJ0" kind="show" id="yCd-Bz-FfF"/>
                                 </connections>
                             </tableViewCell>
@@ -74,7 +88,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="112"/>
+            <point key="canvasLocation" x="804" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVb-1h-iwJ">
