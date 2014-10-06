@@ -10,32 +10,16 @@ import Foundation
 
 class Tweet {
   private var data: NSDictionary
+  let user: TwitterUser
   
   init(fromDictionary: NSDictionary) {
     data = fromDictionary
+    user = TwitterUser(fromDictionary: data["user"] as NSDictionary)
   }
   
   var text: String {
     get {
       return data["text"] as String
-    }
-  }
-  
-  var user: NSDictionary {
-    get {
-      return data["user"] as NSDictionary
-    }
-  }
-  
-  var profileImageURL: NSURL {
-    get {
-      var url = (data["user"] as NSDictionary)["profile_image_url"] as String
-      url = url.stringByReplacingOccurrencesOfString("_normal.jpeg",
-        withString: "_bigger.jpeg",
-        options: NSStringCompareOptions.BackwardsSearch,
-        range: nil)
-      
-      return NSURL(string: url)
     }
   }
 }
