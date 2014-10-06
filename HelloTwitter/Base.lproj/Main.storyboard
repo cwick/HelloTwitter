@@ -43,7 +43,7 @@
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             <connections>
                                 <action selector="searchFieldEditingDidBegin:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="Yai-Na-8rP"/>
                                 <action selector="searchFieldEditingDidEnd:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="vcQ-vz-8Kw"/>
@@ -131,6 +131,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PEU-6Z-G1j"/>
+        <segue reference="u8F-1w-iF8"/>
     </inferredMetricsTieBreakers>
 </document>

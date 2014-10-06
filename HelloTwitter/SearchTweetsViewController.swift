@@ -54,7 +54,6 @@ class SearchTweetsViewController: UITableViewController {
   private func initializeSearchResultsView() {
     tableView.dataSource = self.dataSource
     tableView.tableFooterView = UIView(frame: CGRectZero)
-    performTwitterSearch("technology")
   }
   
   private func performTwitterSearch(query: String) {
@@ -73,7 +72,14 @@ class SearchTweetsViewController: UITableViewController {
 // MARK: UITextFieldDelegate
 extension SearchTweetsViewController : UITextFieldDelegate {
   func textFieldShouldReturn(textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
+    var trimmedSearchQuery = textField.text
+      .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    
+    if countElements(trimmedSearchQuery) > 0 {
+      textField.resignFirstResponder()
+      performTwitterSearch(searchField.text)
+    }
+    
     return false
   }
 }
