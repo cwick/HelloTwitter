@@ -55,7 +55,8 @@ class TwitterAPI {
   }
   
   private func createURLSession() -> NSURLSession {
-    return NSURLSession(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration())
+    var config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    return NSURLSession(configuration: config, delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
   }
   
   private func createURLSession(fromBearerToken token: String) -> NSURLSession {

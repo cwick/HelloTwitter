@@ -34,9 +34,7 @@ class SearchTweetsViewController: UITableViewController {
     
     api.fetchSearchResults("technology") { results in
       self.dataSource.tweets = results["statuses"] as NSArray
-      dispatch_after(1, dispatch_get_main_queue(), {
-        self.tableView.reloadData()
-      })
+      self.tableView.reloadData()
     }
   }
   
