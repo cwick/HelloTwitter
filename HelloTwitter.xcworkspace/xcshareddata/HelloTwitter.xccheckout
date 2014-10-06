@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6A2236DA-F691-4446-8DF1-279D8A521D3A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloTwitter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5EE655F2158D933FD505018388D359C3C96817BC</key>
+		<string>github.com:cwick/HelloTwitter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HelloTwitter.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5EE655F2158D933FD505018388D359C3C96817BC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:cwick/HelloTwitter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5EE655F2158D933FD505018388D359C3C96817BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5EE655F2158D933FD505018388D359C3C96817BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HelloTwitter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

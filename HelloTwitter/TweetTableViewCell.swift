@@ -8,7 +8,6 @@ import UIKit
 class TweetTableViewCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
     
     layoutMargins = UIEdgeInsetsZero
     preservesSuperviewLayoutMargins = false

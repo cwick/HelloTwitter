@@ -18,8 +18,15 @@ class TweetsDataSource : NSObject, UITableViewDataSource {
     var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
       forIndexPath: indexPath) as UITableViewCell
     
-    var text = (tweets[indexPath.row] as NSDictionary)["text"] as String
-    cell.textLabel?.text = text
+    var tweet = (tweets[indexPath.row] as NSDictionary)
+    var text = tweet["text"] as String
+    var profileImageURL = (tweet["user"] as NSDictionary)["profile_image_url_https"] as String
+    
+    cell.textLabel!.text = text
+    
+    cell.imageView!.sd_setImageWithURL(NSURL(string: profileImageURL), completed: { (image, error, cacheType, url) -> Void in
+      cell.layoutSubviews()
+    })
     
     return cell
   }
