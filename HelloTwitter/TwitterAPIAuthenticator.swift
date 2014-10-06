@@ -14,7 +14,7 @@ class TwitterAPI {
     self.apiSecret = secret
   }
   
-  func fetchSearchResults(query: String) {
+  func fetchSearchResults(query: String, callback: (NSDictionary) -> ()) {
     fetchBearerToken() { token in
       var url = self.createURL(fromPath: "/1.1/search/tweets.json")
       var urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
@@ -25,8 +25,7 @@ class TwitterAPI {
       
       var task = session.dataTaskWithRequest(request) { (data, response, error) in
         var result = self.parseJSONResponse(data)
-        
-        println(result)
+        callback(result)
       }
       
       task.resume()

@@ -11,11 +11,13 @@ class SearchTweetsViewController: UITableViewController {
   @IBOutlet weak var searchResults: UITableView!
   
   private var previousSearch = ""
+  private var dataSource = TweetsDataSource()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     searchField.delegate = self
+    searchResults.dataSource = self.dataSource
     
     navigationItem.rightBarButtonItem = nil
     navigationItem.backBarButtonItem = UIBarButtonItem(
@@ -30,7 +32,12 @@ class SearchTweetsViewController: UITableViewController {
       key: "yr40AyjoUvDBlE2apn4dfsBqz",
       secret: "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z")
     
-    api.fetchSearchResults("technology")
+    api.fetchSearchResults("technology") { results in
+      self.dataSource.tweets = results["statuses"] as NSArray
+      dispatch_after(1, dispatch_get_main_queue(), {
+        self.tableView.reloadData()
+      })
+    }
   }
   
   @IBAction private func didCancelSearch(sender: AnyObject) {
@@ -58,24 +65,6 @@ extension SearchTweetsViewController : UITextFieldDelegate {
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return false
-  }
-}
-
-// MARK: UITableViewDataSource
-extension SearchTweetsViewController : UITableViewDataSource {
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
-  }
-  
-  override func tableView(tableView: UITableView,
-    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-  {
-    var cell = tableView.dequeueReusableCellWithIdentifier("Tweet Cell",
-      forIndexPath: indexPath) as UITableViewCell
-    
-    cell.textLabel?.text = "\(indexPath.row) in section \(indexPath.section)"
-    
-    return cell
   }
 }
 
