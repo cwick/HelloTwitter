@@ -121,13 +121,13 @@
                         <sections>
                             <tableViewSection id="LxS-bm-Wjd">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dQy-Mx-v57">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="43" id="dQy-Mx-v57">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQy-Mx-v57" id="s65-Xj-hcM">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2go-as-v6h">
-                                                    <rect key="frame" x="8" y="11" width="66" height="21"/>
+                                                    <rect key="frame" x="8" y="0.0" width="66" height="43"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -137,7 +137,10 @@
                                                     </connections>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="abcdef123456" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaV-EN-i8U" userLabel="App Key Value">
-                                                    <rect key="frame" x="118" y="11" width="474" height="21"/>
+                                                    <rect key="frame" x="118" y="0.0" width="474" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="0Nh-JA-pMh"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -148,21 +151,32 @@
                                             <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="yaV-EN-i8U" secondAttribute="trailing" id="3Ul-BS-IKV"/>
+                                                <constraint firstAttribute="centerY" secondItem="yaV-EN-i8U" secondAttribute="centerY" id="FL4-lT-L17"/>
                                                 <constraint firstAttribute="centerY" secondItem="yaV-EN-i8U" secondAttribute="centerY" id="GEO-jt-YTY"/>
+                                                <constraint firstItem="2go-as-v6h" firstAttribute="height" secondItem="yaV-EN-i8U" secondAttribute="height" id="dLt-ux-L3t"/>
                                                 <constraint firstItem="2go-as-v6h" firstAttribute="leading" secondItem="s65-Xj-hcM" secondAttribute="leadingMargin" id="duh-Ad-H2p"/>
                                                 <constraint firstItem="yaV-EN-i8U" firstAttribute="leading" secondItem="s65-Xj-hcM" secondAttribute="leadingMargin" constant="110" id="hjZ-GG-Fhq"/>
+                                                <constraint firstItem="yaV-EN-i8U" firstAttribute="top" secondItem="s65-Xj-hcM" secondAttribute="top" id="scc-D5-VfH"/>
                                                 <constraint firstAttribute="centerY" secondItem="2go-as-v6h" secondAttribute="centerY" id="sq2-At-jEV"/>
+                                                <constraint firstAttribute="bottom" secondItem="yaV-EN-i8U" secondAttribute="bottom" id="xhx-Yq-v7B"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="GEO-jt-YTY"/>
+                                                    <exclude reference="scc-D5-VfH"/>
+                                                    <exclude reference="xhx-Yq-v7B"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QOd-6N-hTL">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="43" id="QOd-6N-hTL">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QOd-6N-hTL" id="LYs-Ql-2r7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Secret" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLV-1A-p5e">
-                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                                    <rect key="frame" x="8" y="0.0" width="86" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -171,7 +185,10 @@
                                                     </connections>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="abcdef123456" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-HB-GXk" userLabel="App Secret Value">
-                                                    <rect key="frame" x="118" y="11" width="474" height="21"/>
+                                                    <rect key="frame" x="118" y="0.0" width="474" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="0Cv-Iq-GKq"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -182,10 +199,27 @@
                                             <constraints>
                                                 <constraint firstItem="uLV-1A-p5e" firstAttribute="leading" secondItem="LYs-Ql-2r7" secondAttribute="leadingMargin" id="9Na-lZ-gWN"/>
                                                 <constraint firstAttribute="centerY" secondItem="uLV-1A-p5e" secondAttribute="centerY" id="Bsd-BT-HNT"/>
+                                                <constraint firstItem="lTF-HB-GXk" firstAttribute="top" secondItem="LYs-Ql-2r7" secondAttribute="topMargin" id="CeC-yN-VFb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lTF-HB-GXk" secondAttribute="trailing" id="En4-SG-A8E"/>
+                                                <constraint firstAttribute="centerY" secondItem="lTF-HB-GXk" secondAttribute="centerY" id="HdX-JE-STZ"/>
+                                                <constraint firstItem="lTF-HB-GXk" firstAttribute="bottom" secondItem="LYs-Ql-2r7" secondAttribute="bottomMargin" id="WBK-yn-cpF"/>
                                                 <constraint firstItem="lTF-HB-GXk" firstAttribute="leading" secondItem="LYs-Ql-2r7" secondAttribute="leadingMargin" constant="110" id="gsZ-L4-r1M"/>
+                                                <constraint firstItem="uLV-1A-p5e" firstAttribute="height" secondItem="lTF-HB-GXk" secondAttribute="height" id="jfc-bW-BFc"/>
                                                 <constraint firstAttribute="centerY" secondItem="lTF-HB-GXk" secondAttribute="centerY" id="lwG-dA-jop"/>
+                                                <constraint firstItem="lTF-HB-GXk" firstAttribute="top" secondItem="LYs-Ql-2r7" secondAttribute="topMargin" id="mO8-Gt-PFS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lTF-HB-GXk" secondAttribute="bottom" id="qyn-fQ-nNs"/>
+                                                <constraint firstItem="lTF-HB-GXk" firstAttribute="top" secondItem="LYs-Ql-2r7" secondAttribute="topMargin" id="rhe-9f-KU0"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="CeC-yN-VFb"/>
+                                                    <exclude reference="WBK-yn-cpF"/>
+                                                    <exclude reference="lwG-dA-jop"/>
+                                                    <exclude reference="mO8-Gt-PFS"/>
+                                                    <exclude reference="qyn-fQ-nNs"/>
+                                                    <exclude reference="rhe-9f-KU0"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -266,6 +300,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PEU-6Z-G1j"/>
+        <segue reference="u8F-1w-iF8"/>
     </inferredMetricsTieBreakers>
 </document>
