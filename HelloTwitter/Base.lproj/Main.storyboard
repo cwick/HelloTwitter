@@ -74,7 +74,7 @@
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Twitter" minimumFontSize="17" clearButtonMode="whileEditing" id="sho-73-3Ve">
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             <connections>
                                 <action selector="searchFieldEditingDidBegin:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="Yai-Na-8rP"/>
@@ -332,6 +332,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PEU-6Z-G1j"/>
+        <segue reference="u8F-1w-iF8"/>
     </inferredMetricsTieBreakers>
 </document>
