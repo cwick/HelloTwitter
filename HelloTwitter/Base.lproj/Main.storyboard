@@ -132,7 +132,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2go-as-v6h">
-                                                    <rect key="frame" x="8" y="0.0" width="66" height="43"/>
+                                                    <rect key="frame" x="8" y="0.0" width="110" height="43"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -158,6 +158,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="yaV-EN-i8U" secondAttribute="trailing" id="3Ul-BS-IKV"/>
                                                 <constraint firstAttribute="centerY" secondItem="yaV-EN-i8U" secondAttribute="centerY" id="FL4-lT-L17"/>
                                                 <constraint firstAttribute="centerY" secondItem="yaV-EN-i8U" secondAttribute="centerY" id="GEO-jt-YTY"/>
+                                                <constraint firstItem="yaV-EN-i8U" firstAttribute="leading" secondItem="2go-as-v6h" secondAttribute="trailing" id="R81-bW-0bJ"/>
                                                 <constraint firstItem="2go-as-v6h" firstAttribute="height" secondItem="yaV-EN-i8U" secondAttribute="height" id="dLt-ux-L3t"/>
                                                 <constraint firstItem="2go-as-v6h" firstAttribute="leading" secondItem="s65-Xj-hcM" secondAttribute="leadingMargin" id="duh-Ad-H2p"/>
                                                 <constraint firstItem="yaV-EN-i8U" firstAttribute="leading" secondItem="s65-Xj-hcM" secondAttribute="leadingMargin" constant="110" id="hjZ-GG-Fhq"/>
@@ -181,7 +182,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Secret" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLV-1A-p5e">
-                                                    <rect key="frame" x="8" y="0.0" width="86" height="43"/>
+                                                    <rect key="frame" x="8" y="0.0" width="110" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -208,6 +209,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="lTF-HB-GXk" secondAttribute="trailing" id="En4-SG-A8E"/>
                                                 <constraint firstAttribute="centerY" secondItem="lTF-HB-GXk" secondAttribute="centerY" id="HdX-JE-STZ"/>
                                                 <constraint firstItem="lTF-HB-GXk" firstAttribute="bottom" secondItem="LYs-Ql-2r7" secondAttribute="bottomMargin" id="WBK-yn-cpF"/>
+                                                <constraint firstItem="lTF-HB-GXk" firstAttribute="leading" secondItem="uLV-1A-p5e" secondAttribute="trailing" id="fKl-9K-2Qo"/>
                                                 <constraint firstItem="lTF-HB-GXk" firstAttribute="leading" secondItem="LYs-Ql-2r7" secondAttribute="leadingMargin" constant="110" id="gsZ-L4-r1M"/>
                                                 <constraint firstItem="uLV-1A-p5e" firstAttribute="height" secondItem="lTF-HB-GXk" secondAttribute="height" id="jfc-bW-BFc"/>
                                                 <constraint firstAttribute="centerY" secondItem="lTF-HB-GXk" secondAttribute="centerY" id="lwG-dA-jop"/>
@@ -310,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-Lc-llo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="114"/>
+            <point key="canvasLocation" x="1519" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yH3-oX-uV8">
@@ -332,6 +334,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="u8F-1w-iF8"/>
+        <segue reference="PEU-6Z-G1j"/>
     </inferredMetricsTieBreakers>
 </document>
