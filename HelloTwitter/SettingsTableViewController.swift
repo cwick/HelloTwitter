@@ -16,6 +16,10 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     (sender.view?.superview?.subviews[1] as UIResponder).becomeFirstResponder()
   }
   
+  @IBAction func doneClicked(sender: UIBarButtonItem) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     if textField == appKeyValue {
       appSecretValue.becomeFirstResponder()

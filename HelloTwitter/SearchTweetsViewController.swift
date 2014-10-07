@@ -27,9 +27,10 @@ class SearchTweetsViewController: UITableViewController {
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    var destination = segue.destinationViewController as TweetDetailsViewController
-    var tweetText = dataSource.tweets[tableView.indexPathForSelectedRow()!.row].text
-    destination.tweetText = tweetText
+    if let destination = segue.destinationViewController as? TweetDetailsViewController {
+      var tweetText = dataSource.tweets[tableView.indexPathForSelectedRow()!.row].text
+      destination.tweetText = tweetText
+    }
   }
   
   @IBAction private func didCancelSearch(sender: AnyObject) {
