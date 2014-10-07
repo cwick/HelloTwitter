@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5j0-yN-Gab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1xk-1y-mZt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet Cell" rowHeight="142" id="kfy-Sk-vTe" customClass="TweetTableViewCell" customModule="HelloTwitter" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet Cell" rowHeight="142" id="kfy-Sk-vTe" customClass="TweetTableViewCell" customModule="HelloTwitter" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfy-Sk-vTe" id="7Oi-cu-GAy">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -108,6 +108,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7Y-pJ-7gD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7" y="114"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="7YG-Zm-dh6">
+            <objects>
+                <tableViewController id="1xk-1y-mZt" userLabel="Settings" customClass="SettingsTableViewController" customModule="HelloTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="PbY-zG-mjb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <sections>
+                            <tableViewSection id="LxS-bm-Wjd">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dQy-Mx-v57">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQy-Mx-v57" id="s65-Xj-hcM">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2go-as-v6h">
+                                                    <rect key="frame" x="8" y="11" width="66" height="21"/>
+                                                    <gestureRecognizers/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="FFA-VX-uB3" appends="YES" id="36i-jG-t78"/>
+                                                    </connections>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="abcdef123456" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaV-EN-i8U" userLabel="App Key Value">
+                                                    <rect key="frame" x="118" y="11" width="474" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="1xk-1y-mZt" id="D1Q-HX-vdf"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yaV-EN-i8U" secondAttribute="trailing" id="3Ul-BS-IKV"/>
+                                                <constraint firstAttribute="centerY" secondItem="yaV-EN-i8U" secondAttribute="centerY" id="GEO-jt-YTY"/>
+                                                <constraint firstItem="2go-as-v6h" firstAttribute="leading" secondItem="s65-Xj-hcM" secondAttribute="leadingMargin" id="duh-Ad-H2p"/>
+                                                <constraint firstItem="yaV-EN-i8U" firstAttribute="leading" secondItem="s65-Xj-hcM" secondAttribute="leadingMargin" constant="110" id="hjZ-GG-Fhq"/>
+                                                <constraint firstAttribute="centerY" secondItem="2go-as-v6h" secondAttribute="centerY" id="sq2-At-jEV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QOd-6N-hTL">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QOd-6N-hTL" id="LYs-Ql-2r7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Secret" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLV-1A-p5e">
+                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="3eZ-xr-Shd" appends="YES" id="Dgk-iO-3qs"/>
+                                                    </connections>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="abcdef123456" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-HB-GXk" userLabel="App Secret Value">
+                                                    <rect key="frame" x="118" y="11" width="474" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="1xk-1y-mZt" id="wRk-63-FgK"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uLV-1A-p5e" firstAttribute="leading" secondItem="LYs-Ql-2r7" secondAttribute="leadingMargin" id="9Na-lZ-gWN"/>
+                                                <constraint firstAttribute="centerY" secondItem="uLV-1A-p5e" secondAttribute="centerY" id="Bsd-BT-HNT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lTF-HB-GXk" secondAttribute="trailing" id="En4-SG-A8E"/>
+                                                <constraint firstItem="lTF-HB-GXk" firstAttribute="leading" secondItem="LYs-Ql-2r7" secondAttribute="leadingMargin" constant="110" id="gsZ-L4-r1M"/>
+                                                <constraint firstAttribute="centerY" secondItem="lTF-HB-GXk" secondAttribute="centerY" id="lwG-dA-jop"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="1xk-1y-mZt" id="cx6-6c-zFE"/>
+                            <outlet property="delegate" destination="1xk-1y-mZt" id="c5s-vh-PWd"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="appKeyLabel" destination="2go-as-v6h" id="eg1-Ev-QPP"/>
+                        <outlet property="appKeyValue" destination="yaV-EN-i8U" id="wXg-a1-wrH"/>
+                        <outlet property="appSecretLabel" destination="uLV-1A-p5e" id="HWb-mL-ijd"/>
+                        <outlet property="appSecretValue" destination="lTF-HB-GXk" id="4aD-85-L3Y"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQG-nw-eWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FFA-VX-uB3" userLabel="App Key Label Tap">
+                    <connections>
+                        <action selector="labelTapped:" destination="1xk-1y-mZt" id="mae-kV-WVX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3eZ-xr-Shd" userLabel="App Secret Label Tap">
+                    <connections>
+                        <action selector="labelTapped:" destination="1xk-1y-mZt" id="bdA-CW-sue"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-8" y="794"/>
         </scene>
         <!--Tweet Details-->
         <scene sceneID="XCh-fU-8in">
