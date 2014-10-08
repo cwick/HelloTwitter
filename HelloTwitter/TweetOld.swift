@@ -8,13 +8,13 @@
 
 import Foundation
 
-class Tweet {
+class TweetOld {
   private var data: NSDictionary
-  let user: TwitterUser
+  let user: TwitterUserOld
   
   init(fromDictionary: NSDictionary) {
     data = fromDictionary
-    user = TwitterUser(fromDictionary: data["user"] as NSDictionary)
+    user = TwitterUserOld(fromDictionary: data["user"] as NSDictionary)
   }
   
   var text: String {

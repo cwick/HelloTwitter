@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TwitterUser {
+class TwitterUserOld {
   private var data: NSDictionary
   
   init(fromDictionary: NSDictionary) {

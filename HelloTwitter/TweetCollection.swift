@@ -22,7 +22,9 @@ struct TweetCollection: SequenceType, ArrayLiteralConvertible {
   }
   
   init(fromDictionaryArray elements: NSArray) {
-    data = (elements as [NSDictionary]).map() { (var tweet) -> Tweet in return Tweet(fromDictionary: tweet) }
+    data = (elements as [NSDictionary]).map() { (var tweet) -> Tweet in
+      return (App.createManagedObject("Tweet") as Tweet).initializeFromDictionary(tweet)
+    }
   }
   
   func generate() -> Collection.Generator {

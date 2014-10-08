@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
+    App.managedContext = managedObjectContext
+    
     return true
   }
   
@@ -42,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    self.saveContext()
+    
+//    self.saveContext()
   }
   
   // MARK: - Core Data stack
@@ -60,6 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
   
   lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
+    println(self.managedObjectModel.entitiesByName)
+    
     // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
     // Create the coordinator and store
     var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)

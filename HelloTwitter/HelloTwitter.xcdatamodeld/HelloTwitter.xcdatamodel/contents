@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Tweet" syncable="YES">
+    <entity name="Tweet" representedClassName="HelloTwitter.Tweet" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="tweets" inverseEntity="TwitterUser" syncable="YES"/>
     </entity>
-    <entity name="TwitterUser" syncable="YES">
+    <entity name="TwitterUser" representedClassName="HelloTwitter.TwitterUser" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profileImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweet" inverseName="user" inverseEntity="Tweet" syncable="YES"/>
     </entity>
     <elements>
         <element name="Tweet" positionX="-63" positionY="-27" width="135" height="73"/>
-        <element name="TwitterUser" positionX="-56" positionY="107" width="128" height="88"/>
+        <element name="TwitterUser" positionX="142" positionY="-34" width="128" height="88"/>
     </elements>
 </model>

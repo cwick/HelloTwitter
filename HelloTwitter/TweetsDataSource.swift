@@ -21,7 +21,7 @@ class TweetsDataSource : NSObject, UITableViewDataSource {
     var tweet = tweets[indexPath.row]
     
     cell.tweetTextView.text = tweet.text
-    cell.profileImage.sd_setImageWithURL(tweet.user.profileImageURL)
+    cell.profileImage.sd_setImageWithURL(NSURL(string: tweet.user.profileImageURL))
     cell.userNameLabel.text = tweet.user.name
     
     return cell
