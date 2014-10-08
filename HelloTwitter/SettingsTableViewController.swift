@@ -12,15 +12,14 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
   @IBOutlet weak var appKeyLabel: UILabel!
   @IBOutlet weak var appKeyValue: UITextField!
   
-  @IBAction func labelTapped(sender: UITapGestureRecognizer) {
-    (sender.view?.superview?.subviews[1] as UIResponder).becomeFirstResponder()
+  @IBAction func doneClicked(sender: UIBarButtonItem) {
+    dismissViewControllerAnimated(true, completion: nil)
   }
   
-  @IBAction func doneClicked(sender: UIBarButtonItem) {
+  func saveSettings() {
     App.defaults.setObject(appKeyValue.text, forKey: "app_key")
     App.defaults.setObject(appSecretValue.text, forKey: "app_secret")
-    
-    dismissViewControllerAnimated(true, completion: nil)
+    App.defaults.setObject(nil, forKey: "twitter_bearer_token")
   }
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -32,6 +31,10 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     return true
+  }
+  
+  override func viewDidDisappear(animated: Bool) {
+    saveSettings()
   }
   
   override func viewDidLoad() {

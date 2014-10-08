@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5j0-yN-Gab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gxF-2d-FTB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -66,11 +66,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Lad-yY-uhq">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="XjS-z9-6HW">
-                            <connections>
-                                <segue destination="RlJ-4b-7pR" kind="presentation" id="lhc-sm-7uU"/>
-                            </connections>
-                        </barButtonItem>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Twitter" minimumFontSize="17" clearButtonMode="whileEditing" id="sho-73-3Ve">
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,12 +89,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="107"/>
+            <point key="canvasLocation" x="4206" y="1458"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVb-1h-iwJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5j0-yN-Gab" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="484-xV-8rc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xeg-ot-dny">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -112,7 +108,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7Y-pJ-7gD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="114"/>
+            <point key="canvasLocation" x="3433" y="1458"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qU2-Pm-V0U">
+            <objects>
+                <tabBarController id="gxF-2d-FTB" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Z6j-X5-XAG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5j0-yN-Gab" kind="relationship" relationship="viewControllers" id="rB6-YX-FOD"/>
+                        <segue destination="1xk-1y-mZt" kind="relationship" relationship="viewControllers" id="trC-B5-THq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iV1-9U-WOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2975" y="154"/>
         </scene>
         <!--Settings-->
         <scene sceneID="7YG-Zm-dh6">
@@ -237,14 +252,9 @@
                             <outlet property="delegate" destination="1xk-1y-mZt" id="c5s-vh-PWd"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" id="b7d-LZ-tAe"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Settings" id="uUJ-3C-YlU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="FHv-0u-9rJ">
-                            <connections>
-                                <action selector="doneClicked:" destination="1xk-1y-mZt" id="hBx-Uj-s03"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Settings" id="uUJ-3C-YlU"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="appKeyLabel" destination="2go-as-v6h" id="eg1-Ev-QPP"/>
@@ -265,7 +275,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1616" y="856"/>
+            <point key="canvasLocation" x="2556" y="1458"/>
         </scene>
         <!--Tweet Details-->
         <scene sceneID="XCh-fU-8in">
@@ -312,25 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-Lc-llo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="114"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yH3-oX-uV8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RlJ-4b-7pR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HRi-Z6-TWl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="1xk-1y-mZt" kind="relationship" relationship="rootViewController" id="eOy-Pz-DEN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="upa-xx-cgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="804" y="856"/>
+            <point key="canvasLocation" x="4879" y="1465"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
