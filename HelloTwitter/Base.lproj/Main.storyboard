@@ -302,7 +302,7 @@
                     <navigationItem key="navigationItem" title="Tweet" id="IyS-hi-Lkm">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="J3F-aI-kef">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" id="PEU-6Z-G1j"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" identifier="search_again" id="PEU-6Z-G1j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
