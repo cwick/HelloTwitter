@@ -24,7 +24,7 @@ class TweetDetailsViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "search_again" {
       var controller = segue.destinationViewController as SearchTweetsViewController
-      controller.navigationItem.leftBarButtonItem = nil
+      controller.prepareToSearchAgain()
     }
   }
 }

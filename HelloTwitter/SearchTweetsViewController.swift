@@ -33,6 +33,10 @@ class SearchTweetsViewController: UITableViewController {
     }
   }
   
+  func prepareToSearchAgain() {
+    navigationItem.leftBarButtonItem = nil
+  }
+  
   @IBAction private func didCancelSearch(sender: AnyObject) {
     searchField.resignFirstResponder()
     searchField.text = previousSearch
