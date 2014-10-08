@@ -17,7 +17,7 @@ struct TweetCollection: SequenceType, ArrayLiteralConvertible {
     return TweetCollection(elements: elements)
   }
   
-  private init(elements: Collection) {
+  init(elements: [Tweet]) {
     data = elements
   }
   

@@ -4,9 +4,22 @@
 //
 
 import UIKit
+import CoreData
 
 class TweetsDataSource : NSObject, UITableViewDataSource {
   var tweets: TweetCollection = []
+  
+  func loadMostRecentSearchResults() {
+    var model = App.managedObjectModel
+    var fetchRequest = model.fetchRequestTemplateForName("MostRecentSearch")?.copy() as NSFetchRequest
+    fetchRequest.relationshipKeyPathsForPrefetching = ["tweet"]
+    fetchRequest.returnsObjectsAsFaults = false
+    
+    var searchResults = App.managedContext.executeFetchRequest(fetchRequest, error: nil) as [NSManagedObject]
+    var tweets = searchResults.map({ (result) -> (Tweet) in result.valueForKey("tweet") as Tweet })
+    
+    self.tweets = TweetCollection(elements: tweets)
+  }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return tweets.count

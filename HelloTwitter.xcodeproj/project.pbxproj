@@ -64,6 +64,7 @@
 		41A15AED19E4B7DD0086F072 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		41A15AEF19E4C4E80086F072 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = ManagedObjects/Tweet.swift; sourceTree = "<group>"; };
 		41A15AF119E4C4E90086F072 /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterUser.swift; path = ManagedObjects/TwitterUser.swift; sourceTree = "<group>"; };
+		41A15AF719E5F0EC0086F072 /* HelloTwitter 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HelloTwitter 2.xcdatamodel"; sourceTree = "<group>"; };
 		41E8F07719E3773F004D4AAB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		41F164C819E0D6B100FA41FF /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		BE8E31162978C607C3D533E7 /* libPods-HelloTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloTwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -555,9 +556,10 @@
 		411E941519DE185C00B1A948 /* HelloTwitter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				41A15AF719E5F0EC0086F072 /* HelloTwitter 2.xcdatamodel */,
 				411E941619DE185C00B1A948 /* HelloTwitter.xcdatamodel */,
 			);
-			currentVersion = 411E941619DE185C00B1A948 /* HelloTwitter.xcdatamodel */;
+			currentVersion = 41A15AF719E5F0EC0086F072 /* HelloTwitter 2.xcdatamodel */;
 			path = HelloTwitter.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

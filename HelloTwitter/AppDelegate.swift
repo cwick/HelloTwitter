@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
 
     App.managedContext = managedObjectContext
+    App.managedObjectModel = managedObjectModel
+    
     App.defaults.registerDefaults(["app_key": "", "app_secret": ""])
     
     return true
@@ -46,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     
-//    self.saveContext()
+    self.saveContext()
   }
   
   // MARK: - Core Data stack
@@ -70,7 +72,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("HelloTwitter.sqlite")
     var error: NSError? = nil
     var failureReason = "There was an error creating or loading the application's saved data."
-    if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+    if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType,
+      configuration: nil,
+      URL: url,
+      options: [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true],
+      error: &error) == nil
+    {
       coordinator = nil
       // Report any error we got.
       let dict = NSMutableDictionary()

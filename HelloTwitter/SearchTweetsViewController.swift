@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchTweetsViewController: UITableViewController {
   @IBOutlet private weak var searchField: UITextField!
@@ -53,6 +54,7 @@ class SearchTweetsViewController: UITableViewController {
   }
   
   private func initializeSearchResultsView() {
+    self.dataSource.loadMostRecentSearchResults()
     tableView.dataSource = self.dataSource
     tableView.tableFooterView = UIView(frame: CGRectZero)
   }
@@ -64,10 +66,22 @@ class SearchTweetsViewController: UITableViewController {
     
     api.fetchSearchResults(query) { results in
       self.dataSource.tweets = TweetCollection(fromDictionaryArray: results["statuses"] as NSArray)
+      self.saveSearchResults(self.dataSource.tweets)
       self.tableView.reloadData()
     }
   }
   
+  private func saveSearchResults(tweets: TweetCollection) {
+    App.deleteAllObjectsForEntity("SearchResult")
+    App.deleteAllObjectsForEntity("Tweet")
+    App.deleteAllObjectsForEntity("TwitterUser")
+    
+    for tweet in tweets {
+      App.createManagedObject("SearchResult").setValue(tweet, forKey: "tweet")
+    }
+    
+    App.managedContext.save(nil)
+  }
 }
 
 // MARK: UITextFieldDelegate
