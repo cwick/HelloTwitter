@@ -21,6 +21,7 @@
 		41822AB819E3255000315FB7 /* TweetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41822AB719E3255000315FB7 /* TweetCollection.swift */; };
 		41822ABA19E331D200315FB7 /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41822AB919E331D200315FB7 /* TwitterUser.swift */; };
 		41A131AC19E3229F0060A9D2 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A131AB19E3229F0060A9D2 /* Tweet.swift */; };
+		41A15AEE19E4B7DD0086F072 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A15AED19E4B7DD0086F072 /* App.swift */; };
 		41E8F07819E3773F004D4AAB /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8F07719E3773F004D4AAB /* SettingsTableViewController.swift */; };
 		41F164C919E0D6B100FA41FF /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F164C819E0D6B100FA41FF /* TwitterAPI.swift */; };
 		B4943F9CEC8A83273D225E83 /* libPods-HelloTwitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E31162978C607C3D533E7 /* libPods-HelloTwitter.a */; };
@@ -58,6 +59,7 @@
 		41822AB919E331D200315FB7 /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 		41A131A919E30BB10060A9D2 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		41A131AB19E3229F0060A9D2 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		41A15AED19E4B7DD0086F072 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		41E8F07719E3773F004D4AAB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		41F164C819E0D6B100FA41FF /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		BE8E31162978C607C3D533E7 /* libPods-HelloTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloTwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				41A131A919E30BB10060A9D2 /* BridgingHeader.h */,
 				41651E3B19E3070D00B94896 /* Podfile */,
 				411E941319DE185C00B1A948 /* AppDelegate.swift */,
+				41A15AED19E4B7DD0086F072 /* App.swift */,
 				411E941219DE185C00B1A948 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -322,6 +325,7 @@
 				41651E3A19E2113600B94896 /* TweetsDataSource.swift in Sources */,
 				41651E3819E1269800B94896 /* TweetDetailsViewController.swift in Sources */,
 				411E941419DE185C00B1A948 /* AppDelegate.swift in Sources */,
+				41A15AEE19E4B7DD0086F072 /* App.swift in Sources */,
 				41822AB819E3255000315FB7 /* TweetCollection.swift in Sources */,
 				41A131AC19E3229F0060A9D2 /* Tweet.swift in Sources */,
 			);

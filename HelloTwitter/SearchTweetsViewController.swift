@@ -59,8 +59,8 @@ class SearchTweetsViewController: UITableViewController {
   
   private func performTwitterSearch(query: String) {
     var api = TwitterAPI(
-      key: "yr40AyjoUvDBlE2apn4dfsBqz",
-      secret: "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z")
+      key: App.defaults.stringForKey("app_key")!,
+      secret: App.defaults.stringForKey("app_secret")!)
     
     api.fetchSearchResults(query) { results in
       self.dataSource.tweets = TweetCollection(fromDictionaryArray: results["statuses"] as NSArray)

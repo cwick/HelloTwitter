@@ -17,6 +17,9 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
   }
   
   @IBAction func doneClicked(sender: UIBarButtonItem) {
+    App.defaults.setObject(appKeyValue.text, forKey: "app_key")
+    App.defaults.setObject(appSecretValue.text, forKey: "app_secret")
+    
     dismissViewControllerAnimated(true, completion: nil)
   }
   
@@ -32,6 +35,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func viewDidLoad() {
-    super.viewDidLoad()
+    appKeyValue.text = App.defaults.stringForKey("app_key")
+    appSecretValue.text = App.defaults.stringForKey("app_secret")
   }
 }

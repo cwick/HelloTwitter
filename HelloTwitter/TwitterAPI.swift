@@ -33,6 +33,19 @@ class TwitterAPI {
   }
   
   private func fetchBearerToken(callback: (String) ->()) {
+    fetchBearerTokenFromCache(callback) || fetchBearerTokenFromNetwork(callback)
+  }
+  
+  private func fetchBearerTokenFromCache(callback: (String)  ->()) -> Bool {
+    if let bearerToken = App.defaults.stringForKey("twitter_bearer_token") {
+      callback(bearerToken)
+      return true
+    }
+    
+    return false
+  }
+  
+  private func fetchBearerTokenFromNetwork(callback: (String) ->()) -> Bool {
     var session = createURLSession()
     var request = NSMutableURLRequest(URL: createURL(fromPath: "/oauth2/token"))
     var credentials = "\(apiKey):\(apiSecret)"
@@ -48,10 +61,15 @@ class TwitterAPI {
     
     var task = session.dataTaskWithRequest(request) { (data, response, error) in
       var result = self.parseJSONResponse(data)
-      callback(result["access_token"] as String)
+      var bearerToken = result["access_token"] as String
+      App.defaults.setObject(bearerToken, forKey: "twitter_bearer_token")
+      
+      callback(bearerToken)
     }
     
     task.resume()
+    
+    return true
   }
   
   private func createURLSession() -> NSURLSession {
