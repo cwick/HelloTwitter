@@ -76,8 +76,10 @@ class SearchTweetsViewController: UITableViewController {
     App.deleteAllObjectsForEntity("Tweet")
     App.deleteAllObjectsForEntity("TwitterUser")
     
-    for tweet in tweets {
-      App.createManagedObject("SearchResult").setValue(tweet, forKey: "tweet")
+    for (i, tweet) in enumerate(tweets) {
+      var searchResult = App.createManagedObject("SearchResult")
+      searchResult.setValue(tweet, forKey: "tweet")
+      searchResult.setValue(i, forKey: "rank")
     }
     
     App.managedContext.save(nil)

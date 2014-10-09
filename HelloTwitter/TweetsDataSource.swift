@@ -11,9 +11,10 @@ class TweetsDataSource : NSObject, UITableViewDataSource {
   
   func loadMostRecentSearchResults() {
     var model = App.managedObjectModel
-    var fetchRequest = model.fetchRequestTemplateForName("MostRecentSearch")?.copy() as NSFetchRequest
+    var fetchRequest = NSFetchRequest(entityName: "SearchResult")
     fetchRequest.relationshipKeyPathsForPrefetching = ["tweet"]
     fetchRequest.returnsObjectsAsFaults = false
+    fetchRequest.sortDescriptors = [NSSortDescriptor(key: "rank", ascending: true)]
     
     var searchResults = App.managedContext.executeFetchRequest(fetchRequest, error: nil) as [NSManagedObject]
     var tweets = searchResults.map({ (result) -> (Tweet) in result.valueForKey("tweet") as Tweet })

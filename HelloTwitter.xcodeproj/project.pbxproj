@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		22D2D5BF5684CC601F685954 /* Pods-HelloTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloTwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloTwitter/Pods-HelloTwitter.release.xcconfig"; sourceTree = "<group>"; };
 		3CA32DFD987CAF5360A5B2BC /* Pods-HelloTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloTwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloTwitter/Pods-HelloTwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		410E995919E6078B00F3E182 /* HelloTwitter 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HelloTwitter 3.xcdatamodel"; sourceTree = "<group>"; };
 		411E940E19DE185C00B1A948 /* HelloTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		411E941219DE185C00B1A948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411E941319DE185C00B1A948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -556,6 +557,7 @@
 		411E941519DE185C00B1A948 /* HelloTwitter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				410E995919E6078B00F3E182 /* HelloTwitter 3.xcdatamodel */,
 				41A15AF719E5F0EC0086F072 /* HelloTwitter 2.xcdatamodel */,
 				411E941619DE185C00B1A948 /* HelloTwitter.xcdatamodel */,
 			);
