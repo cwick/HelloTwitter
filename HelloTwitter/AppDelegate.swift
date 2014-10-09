@@ -14,14 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
 
     App.managedContext = managedObjectContext
     App.managedObjectModel = managedObjectModel
     
-    App.defaults.registerDefaults(["app_key": "", "app_secret": ""])
+    App.defaults.registerDefaults([
+      "app_key": "yr40AyjoUvDBlE2apn4dfsBqz",
+      "app_secret": "ZLelMvsTfhjOMoeDjy2qouo66HayjIVoXJWgMLUIQtCX7eY33Z"])
     
     return true
   }
